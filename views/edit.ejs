@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Memory</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit your memory</h1>
+    <p>Id: <%= post.id %> </p>
+    <h3>Name: <%= post.name %></h3>
+    <h3>Content: <%= post.content %></h3>
+    <h3>Title: <%= post.title %></h3>
+    <h3>Tags: <%= post.tags %></h3>
+
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+        <textarea name="name" id="" cols="30" rows="3"><%= post.name %></textarea>
+        <br>
+        <textarea name="title" id="" cols="30" rows="3"><%= post.title %></textarea>
+        <br>
+        <textarea name="content" id="" cols="30" rows="3"><%= post.content %></textarea>
+        <br>
+        <textarea name="tags" id="" cols="30" rows="3"><%= post.tags %></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
